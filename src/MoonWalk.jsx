@@ -160,16 +160,81 @@ export default function MoonWalk() {
       <Chat/>
     {/* Joystick Controls */ }
 <div className='control'>
-  <button onMouseDown={() => setPitch('up')} onMouseUp={() => setPitch(null)}><FaArrowUp /></button>
-  <button onMouseDown={() => setDirection('forward')} onMouseUp={() => setDirection(null)}><FaArrowUp /></button>
-  <button onMouseDown={() => setPitch('down')} onMouseUp={() => setPitch(null)}><FaArrowDown /></button>
-  <button onMouseDown={() => setDirection('left')} onMouseUp={() => setDirection(null)}><FaArrowLeft /></button>
+  <button 
+    onMouseDown={() => setPitch('up')} 
+    onMouseUp={() => setPitch(null)} 
+    onTouchStart={() => setPitch('up')} 
+    onTouchEnd={() => setPitch(null)}
+  >
+    <FaArrowUp />
+  </button>
+
+  <button 
+    onMouseDown={() => setDirection('forward')} 
+    onMouseUp={() => setDirection(null)} 
+    onTouchStart={() => setDirection('forward')} 
+    onTouchEnd={() => setDirection(null)}
+  >
+    <FaArrowUp />
+  </button>
+
+  <button 
+    onMouseDown={() => setPitch('down')} 
+    onMouseUp={() => setPitch(null)} 
+    onTouchStart={() => setPitch('down')} 
+    onTouchEnd={() => setPitch(null)}
+  >
+    <FaArrowDown />
+  </button>
+
+  <button 
+    onMouseDown={() => setDirection('left')} 
+    onMouseUp={() => setDirection(null)} 
+    onTouchStart={() => setDirection('left')} 
+    onTouchEnd={() => setDirection(null)}
+  >
+    <FaArrowLeft />
+  </button>
+
   <div style={{ pointerEvents: 'none' }} />
-  <button onMouseDown={() => setDirection('right')} onMouseUp={() => setDirection(null)}><FaArrowRight /></button>
-  <button onMouseDown={() => setRotation('left')} onMouseUp={() => setRotation(null)}><FaUndoAlt /></button>
-  <button onMouseDown={() => setDirection('backward')} onMouseUp={() => setDirection(null)}><FaArrowDown /></button>
-  <button onMouseDown={() => setRotation('right')} onMouseUp={() => setRotation(null)}><FaRedoAlt /></button>
+
+  <button 
+    onMouseDown={() => setDirection('right')} 
+    onMouseUp={() => setDirection(null)} 
+    onTouchStart={() => setDirection('right')} 
+    onTouchEnd={() => setDirection(null)}
+  >
+    <FaArrowRight />
+  </button>
+
+  <button 
+    onMouseDown={() => setRotation('left')} 
+    onMouseUp={() => setRotation(null)} 
+    onTouchStart={() => setRotation('left')} 
+    onTouchEnd={() => setRotation(null)}
+  >
+    <FaUndoAlt />
+  </button>
+
+  <button 
+    onMouseDown={() => setDirection('backward')} 
+    onMouseUp={() => setDirection(null)} 
+    onTouchStart={() => setDirection('backward')} 
+    onTouchEnd={() => setDirection(null)}
+  >
+    <FaArrowDown />
+  </button>
+
+  <button 
+    onMouseDown={() => setRotation('right')} 
+    onMouseUp={() => setRotation(null)} 
+    onTouchStart={() => setRotation('right')} 
+    onTouchEnd={() => setRotation(null)}
+  >
+    <FaRedoAlt />
+  </button>
 </div>
+
       
 
     </>
