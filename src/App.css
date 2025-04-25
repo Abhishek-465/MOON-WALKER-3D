@@ -1,3 +1,8 @@
+body, html {
+  touch-action: none;
+  overscroll-behavior: none;
+}
+
 body, html, #root {
   margin: 0;
   padding: 0;
