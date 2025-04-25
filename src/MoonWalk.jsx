@@ -105,7 +105,7 @@ export default function MoonWalk() {
 
   return (
     <>
-      <audio src="/public/bg-music.mp3" autoPlay loop style={{ display: 'none' }} />
+      <audio src="/bg-music.mp3" autoPlay loop style={{ display: 'none' }} />
 
       <Canvas
         shadows
