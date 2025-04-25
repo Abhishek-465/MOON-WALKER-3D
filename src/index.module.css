@@ -1,0 +1,113 @@
+.chat-container {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 300px;
+  background: rgba(15, 15, 25, 0.9);
+  border: 2px solid rgb(121, 129, 129);
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgb(87, 90, 90);
+  padding: 15px;
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+  z-index: 1000;
+}
+
+.chat-box {
+  max-height: 150px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.bot-bubble {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #111;
+  color: rgb(241, 255, 255);
+  font-family: 'Orbitron', sans-serif;
+}
+
+.button {
+  background: rgb(139, 173, 217);
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.toggleButton {
+  position: absolute;
+  bottom: 80px;
+  left: 25px;
+  z-index: 1001;
+  background: rgb(80, 84, 89);
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Orbitron', sans-serif;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Optional: reposition toggle button on smaller screens */
+@media (max-width: 905px) {
+  .toggleButton {
+    top: 24px;
+    right: 25px;
+    left: auto;
+    bottom: auto;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* 🔽 Media Query: Move to top-right on smaller screens */
+@media (max-width: 905px) {
+  .chat-container {
+    top: 20px;
+    right: 20px;
+    bottom: auto; /* remove bottom */
+    left: auto;   /* remove left */
+    width: 280px;
+    height: 100px;
+    padding: 10px;
+    font-size: 9px;
+  }
+
+  .input {
+    font-size: 8px;
+  }
+
+  .button {
+    font-size: 16px;
+    padding: 8px;
+  }
+}
+@media (max-width: 390px){
+  .chat-container{
+    width: 200px;
+  }
+}
