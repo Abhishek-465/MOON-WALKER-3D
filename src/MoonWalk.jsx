@@ -102,10 +102,23 @@ export default function MoonWalk() {
   const [pitch, setPitch] = useState(null)
   const [coords, setCoords] = useState({ x: 0, y: 0, z: 0 })
 
+    useEffect(() => {
+    const audio = new Audio('/bg-music.mp3')
+    const startAudio = () => {
+      audio.loop = true
+      audio.play()
+    }
+
+    window.addEventListener('click', startAudio, { once: true })
+
+    return () => {
+      window.removeEventListener('click', startAudio)
+    }
+  }, [])
+
 
   return (
     <>
-      <audio src="/bg-music.mp3" autoPlay loop style={{ display: 'none' }} />
 
       <Canvas
         shadows
