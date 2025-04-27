@@ -2,6 +2,7 @@ import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { useRef, useState, Suspense } from 'react'
 import { Sky, useTexture, Stars } from '@react-three/drei'
 import * as THREE from 'three'
+import { useEffect } from 'react'
 import Chat from './Chat'
 import { FaArrowUp, FaArrowDown, FaArrowLeft, FaArrowRight, FaUndoAlt, FaRedoAlt } from 'react-icons/fa'
 import "./App.css"
