@@ -123,7 +123,7 @@ export default function MoonWalk() {
 
       <Canvas
         shadows
-        camera={{ position: [0, 120, 10], fov: 100 }}
+        camera={{ position: [0, 120, 10], fov: 85 }}
         dpr={[1, 2]}
       >
         <color attach="background" args={['#000000']} />
